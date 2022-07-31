@@ -1,4 +1,10 @@
 @media all {
-  font-family: Lato;
-  font-size: 10px;
+  font-family: 'Lato', sans-serif;
+  font-size: 12px;
+}
+
+h1 {
+  color: #38761d;
+  font-family: 'Source Serif Pro', serif;
+  font-size: 20px;
 }
