@@ -4,7 +4,12 @@
 }
 
 h1 {
-  color: #38761d;
   font-family: 'Source Serif Pro', serif;
   font-size: 20px;
+}
+
+body {
+  margin: 0 auto;
+  max-width: 50em;
+  font-family: 'Lato', sans-serif;
 }
