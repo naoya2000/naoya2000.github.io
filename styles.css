@@ -3,6 +3,12 @@
   font-size: 12px;
 }
 
+h2 {
+  font-family: 'Source Serif Pro', serif;
+  margin-top: 1em;
+  padding-top: 1em;
+}
+
 h1 {
   font-family: 'Source Serif Pro', serif;
   margin-top: 1em;
