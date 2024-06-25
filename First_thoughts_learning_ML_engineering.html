@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+
+<html>
+
+<link rel="stylesheet" href="styles.css">
+
+<head>
+  <title>First thoughts learning ML engineering</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;1,400;1,700&family=Source+Serif+Pro:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+    rel="stylesheet">
+</head>
+
+<div id="nav">
+  <a href="/">Return to home page.</a>
+</div>
+
+<div id="contact">
+  Contact: Please email me at <a href="mailto:naoyaokamoto@live.com">naoyaokamoto@live.com</a>.
+</div>
+
+<div id="header">
+  <h1>First thoughts learning ML engineering</h1>
+</div>
+
+<div id="content">
+  <p>
+    I started working on the <a href="https://www.redwoodresearch.org/mlab">MLAB curriculum</a> to help new machine
+    learning practitioners focused on alignment learn about the subject. There were some things that I realized that may
+    be helpful to new learners.
+  </p>
+
+  <p>
+    First, if you’ve taken math coursework but you still feel like you have a lot of gaps in your knowledge, I recommend
+    jumping in even though you feel like you don’t have the necessary skills for whatever it is you want to tackle. I
+    took applied math coursework (introductions to probability, statistics, numerical analysis, differential equations)
+    when I was in college, but I didn’t always fully understand what I was learning. [1] I believe one failure mode that
+    I experienced was the thought pattern that “because I don't thoroughly remember most of the things from my
+    university coursework, I'm not prepared to proceed further into ML.” Now, there are a lot of perspectives about
+    this, but I found that one approach is to try to learn whatever it is you're learning new (in my case, machine
+    learning engineering). Then, whenever you hit a barrier preventing progress, you should try to learn whatever is
+    blocking the way by reading stuff and learning. I think it is a shift in tactical approach, moving from "I need to
+    learn all the prerequisite material before I start tackling the next phase" to “even if I don't understand all the
+    prerequisite material, it is possible for me to fill in the gaps as I go.” Different people probably have different
+    styles of learning, but I think many people will make much faster progress if they try to review or learn important
+    things whilst they’re working on the key goal at hand.
+  </p>
+
+  <p>
+    Note, however, that I’m not saying that it’s a good idea to start learning about machine learning without having
+    taken the prerequisite coursework. You may not be able to remember each definition, theorem and proof from your math
+    coursework, but there are certain themes that you will pick up from your math coursework that inform what you’re
+    currently studying. For example, reading through this explanation from <a
+      href="https://pytorch.org/docs/stable/generated/torch.nn.BatchNorm2d.html">the documentation for BatchNorm2d</a>,
+    I am familiar with the concept of “expected value” and “biased and unbiased estimators”. I may not remember every
+    single detail, such as the justification for dividing by (n - 1) for sample standard deviation, but I feel
+    comfortable looking up these concepts and refreshing myself. I don’t know how often people run into this trap of
+    feeling like you need to know everything, but I honestly feel that the main purpose of prerequisites is to provide
+    you with the background and themes that you need to learn about new content.
+
+  </p>
+
+  <img src="/img/batch_normalization.jpg" alt="Description of batch normalization from PyTorch docs">
+
+  <p>Source: <a href="https://pytorch.org/docs/stable/generated/torch.nn.BatchNorm2d.html">BatchNorm2d — PyTorch 2.3
+      documentation</a></p>
+  <p>
+    The second thing that I realized is how normal it is to feel confused or get stuck on whatever you're working on.
+    The first time that I came across the concept of a convolution from <a
+      href="https://pytorch.org/docs/stable/generated/torch.nn.Conv2d.html">the Conv2d documentation</a>, I could not
+    easily conceptualize what the idea was about.
+  </p>
+
+  <img src="/img/2d_convolution.jpg" alt="Description of 2d convolution from PyTorch docs">
+
+  <p>
+    I think that this might be a skill that I gained from the “math of machine learning” course that I took last year,
+    where I often felt that I was surrounded by ambiguity. I’ve found that when you’re first learning a new concept in
+    math, it can be helpful to think about the simplest possible case.
+  </p>
+
+  <p>
+    Thinking about the above example with Conv2d, I tried to think about what happens when N = 1 and C_in = 1. OK, we
+    have one item in our batch which consists of one channel. Then, because we also have H and W dimensions, we can
+    think of this as a “2D region” with certain values in our channel. For adding another channel to the existing one, I
+    thought of this as creating another “2D region” that had some sort of relationship to the existing one. For example,
+    if we were to have three channels, this could represent the RGB color model, with each channel representing one of
+    red, green or blue. So overall, a batch of one item with three channels could be thought of as a color picture. Then
+    having a batch of two or more items with three channels can be thought of as having multiple color pictures.
+  </p>
+
+  <p>
+    This is likely a skill that math majors are comfortable with to some extent, but I thought it is worth pointing out
+    because the inclination to look at the simplest case is not something that I’ve always had. There have been times in
+    college math where I didn’t even want to start working on a problem because I thought that it was so complicated.
+    Harnessing this skill, adopting an attitude of “what actions might get me closer to my desired result” over “what is
+    the right action” and being willing to look at problems with fresh eyes over and over will help.
+  </p>
+
+  <p>
+    Lastly, I want to discuss starting points for working on machine learning. I think that learning about machine
+    learning from an engineering perspective could be more useful than tackling it from a theoretical perspective, at
+    least for some people. My naive perspective is that machine learning engineering can offer much more clear progress
+    and feedback loops compared to learning about theory. For example, it is often quick to tell if a function in Python
+    is working properly and not having errors. On the other hand, reading through proofs that you’ve written for errors
+    or edge cases can take a few or more minutes of close reading and analysis. Even for people who want to tackle
+    theory, I think ML engineering may be the best place to begin from.
+  </p>
+
+  <p>
+    I’m still hard at work learning about ML engineering. I want to continue building my skills and my provisional goal
+    is to get to a position where I’ll be able to replicate papers. I hope to write more regularly about my progress,
+    and I look forward to hearing your thoughts.
+  </p>
+
+  <p>
+    Footnote 1: You can never know a counterfactual, but I always wonder how my math understanding would have been
+    different if I had started college as an applied math major. (In my case, I started as a biological sciences major,
+    then around the second year, I changed to applied math.)
+  </p>
+</div>
+
+</html>
